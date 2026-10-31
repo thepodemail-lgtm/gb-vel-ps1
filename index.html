@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>GB Vel and the Shami Secret: PS1 test</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="320" height="240"></canvas>
+    <div id="hud"></div>
+    <div id="msg"></div>
+    <div id="pause-overlay">PAUSED</div>
+    <div id="title-overlay">
+      <h1>GB VEL AND THE SHAMI SECRET</h1>
+      <p>PS1 test — a forest clearing, temple ruins, and the Shami tree.<br/>
+      Drive off the rakshasas. Original low-poly demo; era look only.</p>
+      <p class="hint">TAP / ENTER / Z TO START</p>
+      <p style="margin-top:12px;font-size:11px;opacity:.7">
+        Move: WASD / arrows &nbsp;·&nbsp; Attack: Z / J &nbsp;·&nbsp; Block: X / K &nbsp;·&nbsp; Pause: P
+      </p>
+    </div>
+    <div id="touch">
+      <div class="stick-zone">
+        <div class="stick-base"><div class="stick-knob"></div></div>
+      </div>
+      <div class="btn-col">
+        <div class="tbtn" id="btn-attack">ATTACK</div>
+        <div class="tbtn" id="btn-block">BLOCK</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="js/tuning.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/models.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
