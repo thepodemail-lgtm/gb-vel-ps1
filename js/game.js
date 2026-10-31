@@ -168,6 +168,12 @@
         c.userData.baseColor = c.material.color.getHex();
       }});
     });
+    /* Snap chase camera behind Vel immediately (avoid fog/ground flash). */
+    {
+      const back = new THREE.Vector3(Math.sin(vel.rotation.y), 0, Math.cos(vel.rotation.y));
+      camera.position.copy(vel.position).addScaledVector(back, -TUNING.camDistance).add(new THREE.Vector3(0, TUNING.camHeight, 0));
+      camera.lookAt(vel.position.clone().add(new THREE.Vector3(0, TUNING.camLookHeight, 0)));
+    }
     state = 'play';
     titleEl().style.display = 'none';
     pauseEl().style.display = 'none';
