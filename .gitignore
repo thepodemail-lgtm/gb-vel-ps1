@@ -1,0 +1,6 @@
+.venv/
+shots/
+verify.py
+verify.mjs
+verify-report.json
+__pycache__/
